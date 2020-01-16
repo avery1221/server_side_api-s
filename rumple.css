@@ -1,0 +1,32 @@
+#myHeader {
+    background-color: black;
+    width: 100%;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.searchBar {
+    width: 200px;
+}
+    
+.col-md-9 {
+    float: right;
+    position: absolute;
+    top: -50px;
+    line-break: 20px;
+    overflow: hidden;
+}
+
+body {
+    overflow: initial;
+}
+
+.list-group-item {
+    float: left;
+}
+
+.col-md-3 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
