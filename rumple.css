@@ -1,32 +1,52 @@
 #myHeader {
-    background-color: black;
+    background-color: teal;
     width: 100%;
     font-size: 40px;
     color: white;
     text-align: center;
 }
-
 .searchBar {
     width: 200px;
 }
-    
 .col-md-9 {
     float: right;
     position: absolute;
     top: -50px;
-    line-break: 20px;
-    overflow: hidden;
+    margin: 50px 0px 0px 0px;
+    background-color: teal;
 }
-
 body {
     overflow: initial;
 }
-
 .list-group-item {
     float: left;
+    position: absolute;
+    left: -17px;
 }
-
-.col-md-3 {
+.col-md-3{
     padding-top: 5px;
     padding-bottom: 5px;
+    height: 430px;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0px 0px 20px 0px;
+    color: white;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 20px;
+}
+.col-md-2{
+    background-color: teal;
+    margin: 0px 15px;
+}
+.card-body{
+    height: 429px;
 }

@@ -1,48 +1,49 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="rumple.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link src="http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=975367ea543d55862d9193b0759d9c8a">
+    <link src="http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=15e8e9167d970f296eb474a29ada33f5">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="../resetCSS.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-<div class="container"> 
-    <div class="row">
-        <div id="myHeader">Weather Dashboard</div>
-        <h5>search for a city:</h5>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-            </div><input class="searchBar" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> <input class="btn btn-primary" type="submit">
-        </div>
-        <div class="col-md-3 card" style="width: 18rem;">
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-    </div>        
-        <div class="col-md-9 card">
-            <div class="card-body"><h1>City(Date)</h1>
-                <br>
-                <br>
-            <h5 class="temperature">Temperature stuh</h5>
-                <br>
-            <h5 class="Humidity">Humidity stuh</h5>
-                <br>
-            <h5 class="windSpeed">windSpeed Bitch</h5>
-                <br>
-            <h5 class="UV-Index">UVULA</h5>
+<body background= "assets/interlaced.png">
+    <div class="container"> 
+        <div class="row">
+            <div id="myHeader">Weather Dashboard</div>
+            <h5>Search for a City:</h5>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                </div><input class="searchBar" type="text" class="form-control" id="city" placeholder="  City,Country"  aria-label="Username" aria-describedby="basic-addon1" value="Kansas City,US"> 
+                            </input><input class="btn btn-primary" id="submitWeather" type="submit" onclick="recentCity();"/>
+                                <span id="error"style="padding: 0px 0px 0px 10px;"></span>
+            </div>
+            <div class="col-md-3" class="parentLocation" style="width: 18rem;">
+                <ul class="list-group list-group-flush" id="recentCity" >
+                </ul>
+        </div>        
+            <div class="col-md-9">
+                <div class="cardBody" id="showToday"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div style="font-weight: bolder; font-size: 30px;">5 Day Forecast:</div>
+                <div class="cardBody" id="show">
+                <div class="row">
+                    <div class="col-md-2" id="firstDay"></div>
+                    <div class="col-md-2" id="secondDay"></div>
+                    <div class="col-md-2" id="thirdDay"></div>
+                    <div class="col-md-2" id="fourthDay"></div>
+                    <div class="col-md-2" id="fifthDay"></div>
+                        </div>
             </div>
         </div>
-    </div>
-</div>    
+    </div>   
+<script defer src="jompy.js"></script>
 </body>
 </html>
