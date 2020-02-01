@@ -36,7 +36,7 @@ $(document).ready(function(){
     })
     function show(data){
         return  "<h1 class='text center'>Current Weather for "+ data.city.name +", " + data.city.country + "</h1>" + 
-                "<h2>Weather: " +data.list[0].weather.main + "</h2>" +
+                "<h2>Weather: " +data.list[0].weather[0].main + "</h2>" +
                 "<h2>Description: <img src='https://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +".png'>" + data.list[0].weather[0].description + "</h2>" +
                 "<h2>Temperature: "+ data.list[0].main.temp + "&deg;F</h2>" +
                 "<h2>Wind Speed: "+ data.list[0].wind.speed + " m/s</h2>" +
